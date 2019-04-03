@@ -1,0 +1,6 @@
+{% block content %}
+    <form action='dpm_update' method="post">
+        department:  {{ dpm.dpmname }}<input type="text" name="dpmname" value="{{dpm.dpmname}}" />
+        <input type="submit" value="update">
+    </form>
+{% endblock %}

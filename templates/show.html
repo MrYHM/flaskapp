@@ -1,0 +1,32 @@
+<table border="1">
+    <tr>
+        <td> id </td>
+        <td> username </td>
+        <td> departmentid </td>
+        <td> password </td>
+    </tr>
+{% for user in users %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.department }}</td>
+        <td>{{ user.password }}</td>
+        <td>[<a href="/user/{{ user.id }}/delete">删除</a>]</td>>
+        <td>[<a href="/user/{{ user.id }}/management">管理</a>]</td>>
+    </tr>
+{% endfor %}
+</table>
+<table border="1">
+    <tr>
+        <td> id </td>
+        <td> department </td>
+    </tr>
+{% for dpm in dpms %}
+    <tr>
+        <td>{{ dpm.id }}</td>
+        <td>{{ dpm.dpmname }}</td>
+        <td>[<a href="/dpm/{{ dpm.id }}/delete">删除</a>]</td>>
+        <td>[<a href="/dpm/{{ dpm.id }}/management">管理</a>]</td>>
+    </tr>
+{% endfor %}
+</table>

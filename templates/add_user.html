@@ -1,0 +1,16 @@
+
+{% block content %}
+  <h2>Add user</h2>
+
+<form action="" method="post">
+    {{ user.csrf_token() }}
+    {{ user.username.label }}{{ user.username }}
+    {{ user.password.label }}{{ user.password }}
+    {{ user.department.label }}{{ user.department }}
+    {{ user.submit }}
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor %}
+
+</form>
+{% endblock %}

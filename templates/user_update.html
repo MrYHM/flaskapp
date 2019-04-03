@@ -1,0 +1,9 @@
+{% block content %}
+    <form action='user_update' method="post">
+        username:  {{user.username}} <input type="text" name="username" value="{{user.username}}" />
+        password:  {{ user.password }}<input type="text" name="password" value="{{user.password}}" />
+        department:  {{ user.department }}<input type="text" name="department" value="{{user.department}}" />
+        <input type="submit" value="update">
+    </form>
+    
+{% endblock %}
